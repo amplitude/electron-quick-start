@@ -13,7 +13,12 @@
 
     <script>
       // You can also require other files to run in this process
-      require('./renderer.js')
+      require('./renderer.js');
+
+      var amplitude = require('amplitude-js');
+      amplitude.getInstance().init('1af9c6c98f7dfe0ed183bf4026dc1987');
+      amplitude.getInstance().setUserId('demo user');
+      amplitude.getInstance().logEvent('starting electron app');
     </script>
   </body>
 </html>
